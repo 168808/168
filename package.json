@@ -1,30 +1,40 @@
 {
   "name": "relax",
-  "version": "1.0.0",
-  "description": "A white noise application",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Amery2010/relax.git"
-  },
-  "keywords": [
-    "white",
-    "noise"
-  ],
-  "author": "Amery",
+  "version": "2.0.0",
+  "description": "a white noise application for website.",
+  "repository": "git@github.com:Amery2010/relax.git",
+  "author": "Amery <amery@xiangfa.org>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Amery2010/relax/issues"
+  "private": true,
+  "scripts": {
+    "build": "webpack --config config/webpack.prod.js",
+    "build:dev": "webpack --config config/webpack.dev.js",
+    "watch": "webpack --config config/webpack.dev.js --watch",
+    "start": "webpack-dev-server --config config/webpack.dev.js --open"
   },
-  "homepage": "https://github.com/Amery2010/relax#readme",
-  "dependencies": {
-    "gulp": "^3.9.1"
-  },
+  "browserslist": [
+    "last 3 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
   "devDependencies": {
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-csscomb": "^3.0.8"
+    "autoprefixer": "^9.5.1",
+    "clean-webpack-plugin": "^2.0.2",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.12.0",
+    "postcss-initial": "^3.0.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "ts-loader": "^6.0.1",
+    "typescript": "^3.4.5",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1",
+    "webpack-merge": "^4.2.1"
   }
 }
